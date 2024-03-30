@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="quiz.css">
+<title>Simple Quiz</title>
+
+</head>
+<body>
+
+<div class="container" id="loginForm">
+  <h2>Login</h2>
+  <form onsubmit="authenticateUser(event)">
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <input type="submit" value="Login" id="loginBtn">
+  </form>
+</div>
+
+<div id="quizContainerWrapper" style="display: none;">
+  <div class="container" id="quizContainer">
+    <h2>Welcome to the Quiz</h2>
+    <div class="quiz-question" id="question"></div>
+    <div class="options" id="options"></div>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div id="feedback"></div>
+  </div>
+  <button onclick="nextQuestion()" id="nextBtn" style="display: none;">Next</button>
+</div>
+
+</body>
+<script src="quiz.js"></script>
+</html
